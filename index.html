@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Пользовательская форма</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <script src="js/scripts.js"></script>
+</head>
+
+<body>
+    <form id="myForm" onsubmit="ValidateForm(event)">
+        <label for="username">Имя:</label>
+        <input type="text" id="username" name="username" required pattern="[А-Яа-я]{2,}"><br>
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required minlength="6"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="tel">Телефон:</label>
+        <input type="tel" id="tel" name="tel" required><br>
+
+        <label for="gender">Пол:</label>
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">Мужской</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Женский</label><br>
+
+        <label for="country">Страна:</label>
+        <select id="country" name="country" required>
+            <option value="usa">США</option>
+            <option value="by">Беларусь</option>
+            <option value="uk">Великобритания</option>
+        </select><br>
+
+        <label for="rememberMe">Запомнить меня:<input type="checkbox" id="rememberMe" name="rememberMe"><br></label>
+
+        <button type="button" onclick="ViewUserData(event)">Извлечь данные</button>
+        <button type="submit" onclick="ExtractUserData(event)">Отправить</button>
+    </form>
+</body>
+
+</html>
